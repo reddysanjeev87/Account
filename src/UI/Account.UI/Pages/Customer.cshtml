@@ -12,19 +12,19 @@
 				 <span>0 of 1 selected</span>
 			</div>
 			<div class="input-group mr10">
-			  <span class="input-group-text custom-search-icon" id="basic-addon1"><i class="fa fa-search"></i></span>
-			  <input type="text" class="form-control adjust-searchbox" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+			  <span class="input-group-text custom-search-icon" id="basic-addon1"><i class="fa fa-search f12"></i></span>
+			  <input type="text" class="form-control form-control-sm adjust-searchbox" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
 			</div>
-			<button class="btn btn-primary">Search</button>
+			<button class="btn btn-outline-primary btn-sm">Search</button>
 		</div>	
 	</div>
 	<div class="col-sm-5">
 		<div class="d-flex justify-content-end">
 			<div>
-				<button class="btn btn-outline-primary mr10">Statement Run</button>
+				<button class="btn btn-outline-primary btn-sm mr10">Statement Run</button>
 			</div>
 			<div class="dropdown">
-			  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+			  <button class="btn btn-primary dropdown-toggle btn-sm" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
 				New Customer
 			  </button>
 			  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -34,7 +34,7 @@
 		</div>
 	</div>
 </div>
-<table class="table bg-light table-striped mt-2">
+<table class="table bg-light table-striped mt-2 custom-padding">
 	 <thead>
 		<tr class="bg-secondary text-white">
 			<th width="40">
@@ -101,6 +101,12 @@
 					  records
 				  </div>
 				  <div>
+					  <a href=""><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+					  <input class="f12" type="text" style="width: 30px;" />
+					  of 1
+					  <a href=""><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+				  </div>
+				  <div>
 					  1 record
 				 </div>
 			  </div>
@@ -116,3 +122,10 @@
 
 
 
+@section scripts{
+    <script>
+        jQuery(document).ready(function ($) {
+            
+        });
+    </script>
+}

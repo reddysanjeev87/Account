@@ -6,10 +6,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Account.UI</title>
+
+    @*<link rel="stylesheet" href="~/lib/font-awesome/font-awesome.min.css" asp-append-version="true" />*@
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Account.UI.styles.css" asp-append-version="true" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
 </head>
 <body>
     <header>
@@ -35,7 +38,7 @@
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                                     <li><a class="dropdown-item" asp-page="">Quotes and Estimates</a></li>
-                                    <li><a class="dropdown-item" asp-page="">Sales Invoices</a></li>
+                                    <li><a class="dropdown-item" asp-page="/SalesInvoice">Sales Invoices</a></li>
                                     <li><a class="dropdown-item" asp-page="">Sales Credit Notes</a></li>
                                 </ul>
                             </li>
