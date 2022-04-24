@@ -1,3 +1,4 @@
+using Account.Persisstent.SqlServer;
 using Account.UI.Model;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -6,12 +7,15 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<AuthDbContext>(option => option.UseSqlServer(builder.Configuration.GetConnectionString("Account.Sql")));
 builder.Services.AddIdentity<IdentityUser,IdentityRole>().AddEntityFrameworkStores<AuthDbContext>();
+builder.Services.AddDbContextServices(builder.Configuration.GetConnectionString("Account.Sql"));
 // Add services to the container.
 builder.Services.ConfigureApplicationCookie(config =>
 {
     config.LoginPath = "/Login";
 });
 builder.Services.AddRazorPages();
+
+
 
 var app = builder.Build();
 

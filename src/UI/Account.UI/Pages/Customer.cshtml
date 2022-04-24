@@ -1,0 +1,118 @@
+﻿@page
+@model Account.UI.Pages.CustomerModel
+@{
+}
+<h1>Customers </h1>
+<p>Create, view and manage your customer records.</p>
+
+<div class="row">
+	<div class="col-sm-7">
+		<div class="d-flex justify-content-start">
+			<div class="ui-toolbar mr10">
+				 <span>0 of 1 selected</span>
+			</div>
+			<div class="input-group mr10">
+			  <span class="input-group-text custom-search-icon" id="basic-addon1"><i class="fa fa-search"></i></span>
+			  <input type="text" class="form-control adjust-searchbox" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+			</div>
+			<button class="btn btn-primary">Search</button>
+		</div>	
+	</div>
+	<div class="col-sm-5">
+		<div class="d-flex justify-content-end">
+			<div>
+				<button class="btn btn-outline-primary mr10">Statement Run</button>
+			</div>
+			<div class="dropdown">
+			  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+				New Customer
+			  </button>
+			  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+				<li><a class="dropdown-item" href="#">Import Customers</a></li>
+			  </ul>
+			</div>
+		</div>
+	</div>
+</div>
+<table class="table bg-light table-striped mt-2">
+	 <thead>
+		<tr class="bg-secondary text-white">
+			<th width="40">
+				<div class="form-check mx-2">
+					<input class="form-check-input" type="checkbox" value="">
+				</div>
+			</th>
+			<th>Company / Name</th>
+			<th>Reference</th>
+			<th>Email</th>
+			<th>Telephone</th>
+			<th>Balance Due</th>
+		</tr>
+	 </thead>
+	<tbody>
+    <tr>
+      <th>
+	  <div class="form-check mx-2">
+			<input class="form-check-input" type="checkbox" value="">
+		</div>
+	  </th>
+      <td>Ehasan Company</td>
+      <td></td>
+	  <td>ripon@gmail.com</td>
+      <td>+8801685070240</td>
+	  <td>$10,000</td>
+    </tr>
+    <tr>
+      <th>
+	  <div class="form-check mx-2">
+			<input class="form-check-input" type="checkbox" value="">
+		</div>
+	  </th>
+      <td>Ehasan Company</td>
+      <td></td>
+	  <td>ripon@gmail.com</td>
+      <td>+8801685070240</td>
+	  <td>$30,000</td>
+    </tr>
+	<tr>
+      <th>
+	  <div class="form-check mx-2">
+			<input class="form-check-input" type="checkbox" value="">
+		</div>
+	  </th>
+      <td>Ehasan Company</td>
+      <td></td>
+	  <td>ripon@gmail.com</td>
+      <td>+8801685070240</td>
+	  <td>$20,000</td>
+    </tr>
+	 <tr>
+		  <td colspan="6" class="bg-light">
+			  <div class="d-flex justify-content-between">
+				  <div>
+					  Show
+					  <select>
+						  <option>10</option>
+						  <option>20</option>
+						  <option>30</option>
+						  <option>40</option>
+						  <option>50</option>
+					  </select>
+					  records
+				  </div>
+				  <div>
+					  1 record
+				 </div>
+			  </div>
+			  
+		  </td>
+	  </tr>
+  </tbody>
+
+	 
+
+</table>
+
+
+
+

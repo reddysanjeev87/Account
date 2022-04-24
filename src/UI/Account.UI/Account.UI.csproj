@@ -15,4 +15,12 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Areas\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Infrastructure\Account.Persisstent.SqlServer\Account.Persisstent.SqlServer.csproj" />
+  </ItemGroup>
+
 </Project>
