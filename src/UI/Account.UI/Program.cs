@@ -36,4 +36,8 @@ app.UseAuthorization();
 
 app.MapRazorPages();
 
+AppInitializer.Seed(app);
+
 app.Run();
+
+

@@ -6,10 +6,17 @@
 <p>Create, view and manage your customer records.</p>
 
 <div class="row">
-	<div class="col-sm-7">
+	<div class="col-sm-9">
 		<div class="d-flex justify-content-start">
 			<div class="ui-toolbar mr10">
 				 <span>0 of 1 selected</span>
+			</div>
+			<div class="btn-group mr10" role="group">
+			  <button type="button" class="btn btn-outline-secondary btn-sm"><i class="fa fa-print"></i></button>
+			  <button type="button" class="btn btn-outline-secondary btn-sm"><i class="fa fa-envelope"></i></button>
+			  <button type="button" class="btn btn-outline-secondary btn-sm"><i class="fa fa-file-text"></i></button>
+			  <button type="button" class="btn btn-outline-secondary btn-sm"><i class="fa fa-file-pdf-o"></i></button>
+			  <button type="button" class="btn btn-outline-secondary btn-sm"><i class="fa fa-trash"></i></button>
 			</div>
 			<div class="input-group mr10">
 			  <span class="input-group-text custom-search-icon" id="basic-addon1"><i class="fa fa-search f12"></i></span>
@@ -18,7 +25,7 @@
 			<button class="btn btn-outline-primary btn-sm">Search</button>
 		</div>	
 	</div>
-	<div class="col-sm-5">
+	<div class="col-sm-3">
 		<div class="d-flex justify-content-end">
 			<div>
 				<button class="btn btn-outline-primary btn-sm mr10">Statement Run</button>
@@ -34,10 +41,15 @@
 		</div>
 	</div>
 </div>
-<table class="table bg-light table-striped mt-2 custom-padding">
+
+
+<table class="table bg-light table-striped mt-2 custom-padding position-relative">
 	 <thead>
 		<tr class="bg-secondary text-white">
 			<th width="40">
+				<div class="table-settings">
+					<i class="fa fa-gear"></i>
+				</div>
 				<div class="form-check mx-2">
 					<input class="form-check-input" type="checkbox" value="">
 				</div>
@@ -90,21 +102,21 @@
 		  <td colspan="6" class="bg-light">
 			  <div class="d-flex justify-content-between">
 				  <div>
-					  Show
-					  <select>
-						  <option>10</option>
-						  <option>20</option>
-						  <option>30</option>
-						  <option>40</option>
-						  <option>50</option>
-					  </select>
-					  records
-				  </div>
+						  Show
+						  <select class="f13" style="width: 30px;">
+							  <option>10</option>
+							  <option>20</option>
+							  <option>30</option>
+							  <option>40</option>
+							  <option>50</option>
+						  </select>
+						  records
+					  </div>
 				  <div>
-					  <a href=""><i class="fa fa-angle-left" aria-hidden="true"></i></a>
-					  <input class="f12" type="text" style="width: 30px;" />
+					  <a href=""><i class="fa fa-caret-left" aria-hidden="true"></i></a>
+					  <input class="f12" type="text" style="width: 30px; line-height: 12px;" />
 					  of 1
-					  <a href=""><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+					  <a href=""><i class="fa fa-caret-right" aria-hidden="true"></i></a>
 				  </div>
 				  <div>
 					  1 record
@@ -114,8 +126,6 @@
 		  </td>
 	  </tr>
   </tbody>
-
-	 
 
 </table>
 
@@ -127,5 +137,6 @@
         jQuery(document).ready(function ($) {
             
         });
+
     </script>
 }

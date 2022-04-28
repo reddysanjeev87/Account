@@ -3,132 +3,229 @@
 @{
 }
 <h1>Sales Invoice</h1>
-<p>Create, view and manage your customer records.</p>
+<p>Create, view and manage the invoices you send to your customers.</p>
 
-<div class="row">
-	<div class="col-sm-10">
-		<div class="row">
-			<div class="ui-toolbar mr10 col">
-				 <span>0 of 1 selected</span>
-			</div>
-			<div class="col-4">
-				<div class="input-group mr10">
-				  <span class="input-group-text custom-search-icon" id="basic-addon1"><i class="fa fa-search f12"></i></span>
-				  <input type="text" class="form-control form-control-sm adjust-searchbox" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+
+<ul class="nav nav-tabs custom-tab" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#Invoices" type="button" role="tab" aria-controls="Invoices" aria-selected="true">Invoices</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#RecurringInvoices" type="button" role="tab" aria-controls="RecurringInvoices" aria-selected="false">Recurring Invoices</button>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="Invoices" role="tabpanel" aria-labelledby="home-tab">
+      
+	<div class="row mt-3">
+		<div class="col-sm-10">
+			<div class="row">
+				<div class="col-2 p-0">
+					<div class="ui-toolbar" style="margin-left: 12px;">
+					 <span>0 of 1 selected</span>
+					</div>
 				</div>
-			</div>
-			<div class="col">
-				<div class="input-group mr10" id="datepicker1">
-					<span class="input-group-text custom-label-text f12" id="basic-calendar">Form</span>
-					<input type="text" class="form-control form-control-sm" />
-					<span class="input-group-text custom-search-icon" id="basic-calendar"><i class="fa fa-calendar f12"></i></span>
+				<div class="col-2 p-0">
+				<div class="btn-group" role="group">
+				  <button type="button" class="btn btn-outline-secondary btn-sm"><i class="fa fa-print"></i></button>
+				  <button type="button" class="btn btn-outline-secondary btn-sm"><i class="fa fa-envelope"></i></button>
+				  <button type="button" class="btn btn-outline-secondary btn-sm"><i class="fa fa-file-text"></i></button>
+				  <button type="button" class="btn btn-outline-secondary btn-sm"><i class="fa fa-file-pdf-o"></i></button>
+				  <button type="button" class="btn btn-outline-secondary btn-sm"><i class="fa fa-trash"></i></button>
 				</div>
-			</div>
-			<div class="col">
+				</div>
 				
-			<div class="input-group mr10" id="datepicker2">
-				<span class="input-group-text custom-label-text f12" id="basic-calendar">To</span>
-				<input type="text" class="form-control form-control-sm" />
-				<span class="input-group-text custom-search-icon" id="basic-calendar2"><i class="fa fa-calendar f12"></i></span>
-			</div>
-			</div>
-			<div class="col">
-				<button class="btn btn-outline-primary btn-sm">Search</button>
-			</div>
-
-		</div>	
-	</div>
-	<div class="col-sm-2">
-		<div class="d-flex justify-content-end">
-			
-			<div class="dropdown">
-			  <button class="btn btn-primary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-				New Invoice
-			  </button>
-			  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-				<li><a class="dropdown-item" href="#">New Credit Note</a></li>
-			  </ul>
-			</div>
-		</div>
-	</div>
-</div>
-<table class="table bg-light table-striped mt-2 custom-padding">
-	 <thead>
-		<tr class="bg-secondary text-white">
-			<th width="40">
-				<div class="form-check mx-2">
-					<input class="form-check-input" type="checkbox" value="">
+				<div class="col p-0">
+					<div class="input-group mr10">
+					  <span class="input-group-text custom-search-icon" id="basic-addon1"><i class="fa fa-search f12"></i></span>
+					  <input type="text" class="form-control form-control-sm adjust-searchbox" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+					</div>
 				</div>
-			</th>
-			<th>Invoice Number</th>
-			<th>Invoice Date</th>
-			<th>Telephone</th>
-			<th>User</th>
-			<th>Total</th>
-			<th>Outstanding</th>
-			<th>Issued</th>
-			<th>Status</th>
-			<th>Attachments</th>
-		</tr>
-	 </thead>
-	<tbody>
-    <tr>
-      <th>
-	  <div class="form-check mx-2">
-			<input class="form-check-input" type="checkbox" value="">
+				<div class="col-2 p-0">
+					<div class="input-group mr10 date ui-datepicker" id="datepicker1">
+						<span class="input-group-text custom-label-text f12">Form</span>
+						<input type="text" class="form-control form-control-sm" />
+						<span class="input-group-append">
+						  <span class="input-group-text bg-light d-block f12">
+							<i class="fa fa-calendar"></i>
+						  </span>
+						</span>
+					</div>
+				</div>
+				<div class="col-2 p-0">
+				<div class="input-group mr10 date ui-datepicker" id="datepicker2">
+					<span class="input-group-text custom-label-text f12 ml10"> To </span>
+					<input type="text" class="form-control form-control-sm" />
+					<span class="input-group-append">
+						  <span class="input-group-text bg-light d-block f12">
+							<i class="fa fa-calendar"></i>
+						  </span>
+						</span>
+				</div>
+				</div>
+				<div class="col-1">
+					<button class="btn btn-outline-primary btn-sm">Search</button>
+				</div>
+
+			</div>	
 		</div>
-	  </th>
-     <td></td>
-	 <td></td>
-	 <td></td>
-	 <td></td>
-	 <td></td>
-	 <td></td>
-	 <td></td>
-	 <td></td>
-	 <td></td>
-    </tr>
+		<div class="col-sm-2">
+			<div class="d-flex justify-content-end">
+			
+				<div class="dropdown">
+				  <button class="btn btn-primary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+					New Invoice
+				  </button>
+				  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+					<li><a class="dropdown-item" href="#">New Credit Note</a></li>
+				  </ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<table class="table bg-light table-striped mt-2 custom-padding position-relative">
+		 <thead>
+			<tr class="bg-secondary text-white">
+				<th width="40">
+					<div class="table-settings">
+						<i class="fa fa-gear"></i>
+					</div>
+					<div class="form-check mx-2">
+						<input class="form-check-input" type="checkbox" value="">
+					</div>
+				</th>
+				<th>Invoice Number</th>
+				<th>Invoice Date</th>
+				<th>Telephone</th>
+				<th>User</th>
+				<th>Total</th>
+				<th>Outstanding</th>
+				<th>Issued</th>
+				<th>Status</th>
+				<th>Attachments</th>
+			</tr>
+		 </thead>
+		<tbody>
+		<tr>
+		  <th>
+		  <div class="form-check mx-2">
+				<input class="form-check-input" type="checkbox" value="">
+			</div>
+		  </th>
+		 <td></td>
+		 <td></td>
+		 <td></td>
+		 <td></td>
+		 <td></td>
+		 <td></td>
+		 <td></td>
+		 <td></td>
+		 <td></td>
+		</tr>
     
-	 <tr>
-		  <td colspan="10" class="bg-light">
-			  <div class="d-flex justify-content-between">
-				  <div>
-					  Show
-					  <select>
-						  <option>10</option>
-						  <option>20</option>
-						  <option>30</option>
-						  <option>40</option>
-						  <option>50</option>
-					  </select>
-					  records
+		 <tr>
+			  <td colspan="10" class="bg-light f12">
+				  <div class="d-flex justify-content-between">
+					  <div>
+						  Show
+						  <select class="f12" style="width: 30px;">
+							  <option>10</option>
+							  <option>20</option>
+							  <option>30</option>
+							  <option>40</option>
+							  <option>50</option>
+						  </select>
+						  records
+					  </div>
+					  <div>
+						  <a href=""><i class="fa fa-caret-left" aria-hidden="true"></i></a>
+						  <input class="f12" type="text" style="width: 30px; line-height: 12px;" />
+						  of 1
+						  <a href=""><i class="fa fa-caret-right" aria-hidden="true"></i></a>
+					  </div>
+					  <div>
+						  1 record
+					 </div>
 				  </div>
-				  <div>
-					  <a href=""><i class="fa fa-angle-left" aria-hidden="true"></i></a>
-					  <input class="f12" type="text" style="width: 30px;" />
-					  of 1
-					  <a href=""><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-				  </div>
-				  <div>
-					  1 record
-				 </div>
-			  </div>
 			  
-		  </td>
-	  </tr>
-  </tbody>
+			  </td>
+		  </tr>
+	  </tbody>
 
-	 
+	</table>
 
-</table>
 
+  </div>
+  <div class="tab-pane fade" id="RecurringInvoices" role="tabpanel" aria-labelledby="profile-tab">
+	  <div class="text-end mt-3">
+		  <button class="btn btn-primary btn-sm">New Recurring Invoice</button>
+	  </div>
+	  <table class="table bg-light table-striped mt-2 custom-padding">
+		 <thead>
+			<tr class="bg-secondary text-white">
+				<th>Contact</th>
+				<th>Reference</th>
+				<th>Frequency</th>
+				<th>Previous Invoice</th>
+				<th>Next Invoice</th>
+				<th>End Date</th>
+				<th>Outcome</th>
+				<th>Amount</th>
+				<th>Actions</th>
+			</tr>
+		 </thead>
+		<tbody>
+		<tr>
+		 <td></td>
+		 <td></td>
+		 <td></td>
+		 <td></td>
+		 <td></td>
+		 <td></td>
+		 <td></td>
+		 <td></td>
+		 <td></td>
+		</tr>
+    
+		 <tr>
+			  <td colspan="10" class="bg-light">
+				  <div class="d-flex justify-content-between">
+					  <div>
+						  Show
+						  <select>
+							  <option>10</option>
+							  <option>20</option>
+							  <option>30</option>
+							  <option>40</option>
+							  <option>50</option>
+						  </select>
+						  records
+					  </div>
+					  <div>
+						  <a href=""><i class="fa fa-caret-left" aria-hidden="true"></i></a>
+						  <input class="f12" type="text" style="width: 30px;" />
+						  of 1
+						  <a href=""><i class="fa fa-caret-right" aria-hidden="true"></i></a>
+					  </div>
+					  <div>
+						  1 record
+					 </div>
+				  </div>
+			  
+			  </td>
+		  </tr>
+	  </tbody>
+
+	</table>
+  </div>
+</div>
 
 
 
 @section scripts{
     <script>
         jQuery(document).ready(function ($) {
-            
+             $('.ui-datepicker').datepicker();
         });
     </script>
 }
